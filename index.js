@@ -6,7 +6,7 @@ const supportedBrowsers = [
 
 export default (browser) => {
   if (process.platform !== 'win32' || !isSupportedBrowser(browser)) {
-    return
+    return null
   }
   if (browser === 'internet explorer') {
     return require('./ie/')().then(r => r)
