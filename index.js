@@ -5,7 +5,7 @@ const supportedBrowsers = [
 ]
 
 export default (browser) => {
-  if (!isSupportedBrowser(browser)) {
+  if (process.platform !== 'win32' || !isSupportedBrowser(browser)) {
     return
   }
   if (browser === 'internet explorer') {
